@@ -1,9 +1,9 @@
-// Show coin progress in navbar
+/* Show coin progress in navbar */
 .navbar-item.darker::after {content: attr(title);}
 .navbar-item.darker:not(:first-child):after {text-transform: capitalize;}
 .navbar-item.darker > .coins {margin-right: 5px;}
 
-// Show actual post time
+/* Show actual post time */
 .timeago::before {content: attr(title) " - ";}
 .bglinker .timeago::before {content: ""; }
 
@@ -14,13 +14,10 @@ aswell as using brighter colours and making everything a note bigger */
 .username a{color:#39e;}
 .has-background-image .username {text-shadow: 0 0 2px black;}
 
-// Fixes shit profile background cropping
-.postrender .postinner > .postuser .background-image{background-size:100%; background-repeat:no-repeat;}
-
 /* Fix badly aligned level */
 span.userlevel {top:-3px;}
 
-// darker background
+/* darker background */
 html::before {
     background-image: none !important;
     background-color: #222;
