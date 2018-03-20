@@ -1,7 +1,3 @@
-@import 'https://pgsil.github.io/awfullydark2/styles.css'; // Awfully Dark 2
-@import 'https://pgsil.github.io/awfullydark2/optionals/blkSplr.css'; // Awfully Dark 2 spoilers
-@import 'https://tamschi.github.io/Newpunch-Hover-Ratings/style.css'; // Hide ratings when not hovering over
-
 // Show coin progress in navbar
 .navbar-item.darker::after {content: attr(title);}
 .navbar-item.darker:not(:first-child):after {text-transform: capitalize;}
@@ -13,8 +9,19 @@
 
 /* Improve username legibility on backgrounds, by selectively applying textshadowing
 aswell as using brighter colours and making everything a note bigger */
-.postrender .postinner > .postuser .username{font-weight:normal;font-size:1.23rem;}
 .username.user-gold a{color:#eb2;}
 .username.user-moderator a, .username.user-admin a{color:#0a0;}
 .username a{color:#39e;}
 .has-background-image .username {text-shadow: 0 0 2px black;}
+
+// Fixes shit profile background cropping
+.postrender .postinner > .postuser .background-image{background-size:100%; background-repeat:no-repeat;}
+
+/* Fix badly aligned level */
+span.userlevel {top:-3px;}
+
+// darker background
+html::before {
+    background-image: none !important;
+    background-color: #222;
+}
