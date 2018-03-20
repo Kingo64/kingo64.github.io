@@ -1,0 +1,5 @@
+.navbar-item.darker::after { content: attr(title); }
+.navbar-item.darker:not(:first-child):after { text-transform: capitalize; }
+.navbar-item.darker > .coins {  margin-right: 5px; }
+.timeago::before { content: attr(title) " - "; }
+.bglinker .timeago::before { content: ""; }
